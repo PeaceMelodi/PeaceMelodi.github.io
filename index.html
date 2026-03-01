@@ -454,7 +454,7 @@
   // NAV SCROLL HIGHLIGHT — desktop + mobile
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-links a');
-  const mobileLinks = document.querySelectorAll('.mobile-menu a[href^="#"]');
+  const mobileLinks = document.querySelectorAll('.mobile-menu a[href^="#"]:not(.btn-primary)');
   window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(s => { if (window.scrollY >= s.offsetTop - 200) current = s.getAttribute('id'); });
